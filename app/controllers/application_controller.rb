@@ -1,10 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  def 404
-    @errors = Error.all
-  end
-  
   #testing
   def render_404
     render :template => 'welcome/index.html.erb', :status => 404
