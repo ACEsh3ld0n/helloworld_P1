@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
  
  protected
      def local_request?
-        true
+        false
      end
   
   def render_404
