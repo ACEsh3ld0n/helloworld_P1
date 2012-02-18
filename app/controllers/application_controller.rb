@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  #testing
-  def render_404
-    render :template => 'welcome/index.html.erb', :status => 404
+  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+ 
+  private
+ 
+  def record_not_found
+    render :text => "404 Not Found", :status => 404
   end
-  
-  def render_500
-    render :template => 'errors/500.html.erb', :status => 500
-  end
+
 end
