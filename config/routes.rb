@@ -14,7 +14,7 @@ HelloworldP1::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-      #resources :notfound
+      resources :notfound
       #resources :error
 
   # Sample resource route with options:
